@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+}
+
+button{
+    outline: none;
+}
+
+/*
+   Hint -- The Text Of /* Not Execute or Run On Browser.. it's Only For read code clearly * /    
+*/
+
+
+/* Main Css File */
+
+/*    .CBTn These Code For Button On Center Position*/
+#fullBtnSection{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+#fullBtnSection button{
+    display: block;
+    margin: 20px 0px;
+}
+
+.PrimaryBtn {
+    background: blue;
+    width: 300px;
+    height: 50px;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-family: arial black;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.VisBtn{
+    /*For Hide Second Button Code Below*/
+    transform:scaleY(0);
+    opacity: 0;
+    width: 300px;
+    height: 50px;
+}
+
+.btnShow{
+    background: blue;
+    width: 300px;
+    height: 50px;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-family: arial black;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* For Showing Hidden Button*/
+    transform:scaleY(1);
+    transform-origin: top;
+    transition: transform 1s;
+    opacity: 1;
+}
+
+/*
+=======   EnD Of Upper Part =============
+*/
+
+
+/*
+===========================
+
+  Message Menu Code Below
+===============================
+
+*/
+
+
+.chat-box{
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    background: rgb(0,300,0);
+    width: 300px;
+    border-radius: 5px 5px 0px 0px;
+    transform:scaleY(0);
+    transform-origin: bottom;
+    transition: all 0.3s;
+}
+.chat-head{
+    width: inherit;
+    height: 44px;
+    background: #0b801a;
+    border-radius: 5px 5px 0px 0px;
+}
+.chat-head h2{
+    color: #ecdada;
+    padding: 9px 3px;
+    display: inline-block;
+}
+.chat-head img{
+    cursor: pointer;
+    float: right;
+    width: 25px;
+    margin: 12px;
+}
+.chat-body{
+    height: 355px;
+    width: inherit;
+    overflow: auto;
+    margin-bottom: 45px;
+}
+.chat-text{
+    position: fixed;
+    bottom: 0px;
+    height: 45px;
+    width: inherit;
+}
+.chat-text textarea{
+    width: inherit;
+    margin: -40px 0px 20px 0px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 1px solid #bdc3c7;
+    padding: 10px;
+    font-size: 18px;
+    resize: none;
+}
+.chat-text textarea:active, .chat-text textarea:focus, .chat-text textarea:hover{
+    border-color: royalblue;
+}
+.msg-send{
+    background: #e60101;
+}
+.msg-receive{
+    background: blue;
+}
+.msg-send, .msg-receive{
+    width: 200px;
+    height: 35px;
+    padding: 5px 5px 5px 10px;
+    margin: 10px auto;
+    border-radius: 3px;
+    line-height: 30px;
+    position: relative;
+    color: white;
+}
+.msg-receive:before{
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border: 15px solid;
+    border-color: transparent #0000ff transparent transparent;
+    left: -29px;
+    top: 7px;
+}
+.msg-send:after{
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border: 15px solid;
+    border-color: transparent transparent transparent #e60101;
+    right: -29px;
+    top: 7px;
+}
+.msg-receive:hover, .msg-send:hover{
+    opacity: .9;
+}
+
+.chat-box{
+    font-family: arial;
+
+}
+.chat-head h3 {
+    position: absolute;
+    width: 20px;
+    top: -44px;
+    font-size: 26px;
+    color: white;
+    border-radius: 0px 23px 0px 0px;
+    border-bottom: 3px solid red;
+    padding: 6px 12px;
+    background: #0b801a;
+    cursor: pointer;
+}
