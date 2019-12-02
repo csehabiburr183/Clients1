@@ -1,0 +1,86 @@
+Greetings To You
+----------------
+
+Expalain
+========
+
+----------------------------------
+	File Includes
+----------------------------------
+File Includes On Zip :    
+1. index.html ( For HTML Elements )
+2. style.css  ( For Style HTML Elements )
+3. core.js    ( For Javascript Functionality [Like As When Click First Button Then Open Bottom Button] )
+
+
+
+=======================
+ Connect External File
+=======================
+
+1. First Link Css File Under Head [ <link rel="stylesheet" href="style.css" type="text/css"> ] Use 
+2. Link With Javascript File Under Body [ <script type="text/javascript" src="core.js"></script> ] Use
+3. Link With Jquery CDN..
+
+
+
+-----------------------------------
+      Explain How Button Works
+-----------------------------------
+
+<section id="fullBtnSection">
+	<div class="CBtn">
+		<button type="button" class="PrimaryBtn"> Click For Next </button>
+		
+		<button type="button" class="VisBtn"> CLICK ME </button>
+	</div>
+</section>
+
+
+
+**  Here <section> For Full Button Section.. <div> For Main Area For Button Elements.
+**  First Button Visible in Life..
+**  Then Second Button Only Visible When Click First Button.. [ Need Javascript For Do It ]
+
+
+
+
+//  Javascript Code Below For Showing Second Button 
+
+function ShowBtn() {
+	document.querySelector(".PrimaryBtn").addEventListener("click",function(){
+		document.querySelector(".VisBtn").setAttribute("class","btnShow")
+	});
+};
+ShowBtn();
+
+
+
+**** Use Simple Function ShowBtn() Then  Select The Element where i click To Add A New Button
+**** using [ document.querySelector ]
+**** When I Click First Button Class Name .PrimaryBtn then i'm Add a Event for clicking Function
+**** then I Select Which Element I Need To Show Exactly When Click .PrimaryBtn
+**** Using [ document.querySelector(".VisBtn") ]
+ *** And Set A New Attribute -> class-- Using [.setAttribute("class","btnShow") ]
+  ** here class is An HTML Attribute and btnShow is a css Property..
+   * You can see the property [ btnShow ] value on Css page..
+
+Now Call Function using On Using [ ShowBtn(); ]
+==========
+That's It
+==========
+
+______________________  Another Function Work Like This Upper System ________________________
+_____________________________________________________________________________________________
+
+  Just Grab Your Mind Where You want to click For Showing Content...
+  Find The HTML Element Id/Class Where You Want To click for showing Another Content
+
+
+** Then Just Set Another Function Name - like this  FullChat(). and Target That what change you need.	
+
+_____
+Note: If You Need To Change Element By Using HTML ID Use #sign Under Like This querySelector("#IDNAME")
+      If  Need To Change Element By Using HTML Class Use . Under Like This querySelector(".IDNAME")
+
+
